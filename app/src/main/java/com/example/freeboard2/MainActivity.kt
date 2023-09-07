@@ -23,21 +23,14 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        override fun onCreate(savedInstanceState: Bundle?) {
-            super.onCreate(savedInstanceState)
-            setContentView(R.layout.activity_main)
-
-
-            val developer_info_btn = findViewById<View>(R.id.btnnew) as Button
-            developer_info_btn.setOnClickListener {
-                val intent = Intent(applicationContext, MainActivity::class.java)
-                startActivity(intent)
-            }
-        }
-
-
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        val developer_info_btn = findViewById<View>(R.id.btnnew) as Button
+        developer_info_btn.setOnClickListener {
+            val intent = Intent(applicationContext, MainActivity::class.java)
+            startActivity(intent)
+        }
 
         setSupportActionBar(binding.appBarMain.toolbar)
 
