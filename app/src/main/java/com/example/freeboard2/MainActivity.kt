@@ -12,6 +12,9 @@ import androidx.navigation.ui.setupWithNavController
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
 import com.example.freeboard2.databinding.ActivityMainBinding
+import android.content.Intent
+import android.view.View
+import android.widget.Button
 
 class MainActivity : AppCompatActivity() {
 
@@ -20,6 +23,18 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        override fun onCreate(savedInstanceState: Bundle?) {
+            super.onCreate(savedInstanceState)
+            setContentView(R.layout.activity_main)
+
+
+            val developer_info_btn = findViewById<View>(R.id.btnnew) as Button
+            developer_info_btn.setOnClickListener {
+                val intent = Intent(applicationContext, MainActivity::class.java)
+                startActivity(intent)
+            }
+        }
+
 
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
