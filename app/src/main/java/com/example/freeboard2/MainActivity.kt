@@ -15,6 +15,8 @@ import com.example.freeboard2.databinding.ActivityMainBinding
 import android.content.Intent
 import android.view.View
 import android.widget.Button
+import android.widget.Toast
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -26,20 +28,18 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-
-
-
-        binding.btnnew.setOnClickListener {
-            val intent = Intent(this, activity_new::class.java)
-            startActivity(intent)
-        }
-
         setSupportActionBar(binding.appBarMain.toolbar)
 
         binding.appBarMain.fab.setOnClickListener { view ->
             Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                 .setAction("Action", null).show()
         }
+
+        binding.btnnew.setOnClickListener {
+            val intent = Intent(this, activity_new::class.java)
+            startActivity(intent)
+        }
+
         val drawerLayout: DrawerLayout = binding.drawerLayout
         val navView: NavigationView = binding.navView
         val navController = findNavController(R.id.nav_host_fragment_content_main)
