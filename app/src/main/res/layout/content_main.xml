@@ -111,6 +111,7 @@
         android:layout_marginStart="105dp"
         android:layout_marginTop="557dp"
         android:layout_marginEnd="218dp"
+        android:onClick="movebtn"
         android:text="회원가입"
         android:textSize="10sp"
         app:layout_constraintEnd_toEndOf="@+id/nav_host_fragment_content_main"

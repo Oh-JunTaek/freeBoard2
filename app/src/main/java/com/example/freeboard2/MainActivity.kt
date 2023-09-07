@@ -26,9 +26,11 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val developer_info_btn = findViewById<View>(R.id.btnnew) as Button
-        developer_info_btn.setOnClickListener {
-            val intent = Intent(applicationContext, MainActivity::class.java)
+
+
+
+        binding.btnnew.setOnClickListener {
+            val intent = Intent(this, activity_new::class.java)
             startActivity(intent)
         }
 
